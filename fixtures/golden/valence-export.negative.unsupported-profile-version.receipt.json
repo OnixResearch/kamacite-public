@@ -1,0 +1,52 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "valence-export.negative.unsupported-profile-version",
+    "artifact_class": "valence-receipt-export",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.valence_receipt_export.conformance.malformed_input]"
+    ],
+    "input_identities": {
+      "valence-conformance": {
+        "domain": "adapter",
+        "algorithm": "blake3",
+        "hex": "851ca3bc05c61095fc61a7b55017a70b330b4acc264525a51717e3ae0e1570cb"
+      },
+      "valence-source-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "cb2233ee6d78163198525dbf77bc8f632b910fac660b59babc7c38fffd77c5ef"
+      }
+    },
+    "output_identities": {},
+    "checked_laws": [
+      "names-as-metadata",
+      "non-claim-preservation",
+      "source-envelope-preservation",
+      "source-receipt-identity-bound",
+      "unsupported-profile-rejected"
+    ],
+    "diagnostics": [
+      {
+        "code": "unsupported-schema-version",
+        "requirement_id": "r[kamacite.valence_receipt_export.conformance.malformed_input]",
+        "field": "conformance.profile_version",
+        "message": "unsupported Valence export profile version rejected",
+        "details": {
+          "actual": "kamacite.valence_receipt_export.v0",
+          "expected": "kamacite.valence_receipt_export.v1"
+        }
+      }
+    ],
+    "non_claims": [
+      "unsupported export profile versions are not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "5b508c04f4308d57a5655fde67ae799658239864aae1447a65a203644946433b"
+  }
+}

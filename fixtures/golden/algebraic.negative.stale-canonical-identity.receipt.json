@@ -1,0 +1,46 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.negative.stale-canonical-identity",
+    "artifact_class": "algebraic-effect",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.fixture_corpus.negative_stale_identity]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "c8de810059cdb58853ae386d5266e77b3d9efab3dc1d03cc78de149c9b0cd25e"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "17cbbb11aae0911d00083b5710890df2216b5a7ea75b76a0d40b0ef0ec3afdd8"
+      }
+    },
+    "checked_laws": [
+      "algebraic-hash-match"
+    ],
+    "diagnostics": [
+      {
+        "code": "algebraic-effect-hash-mismatch",
+        "requirement_id": "r[kamacite.algebraic_effects.fixture_corpus.negative_stale_identity]",
+        "field": "algebraic.declared_identity.hex",
+        "message": "declared algebraic-effect identity does not match canonical Preserves packed bytes",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "stale algebraic-effect identity rejected"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "59f16323fb2d8ac6e95ea1f6d8ffc55b4877e2bdd7120748360746b37a8cad5c"
+  }
+}

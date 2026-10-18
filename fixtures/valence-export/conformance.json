@@ -1,0 +1,44 @@
+{
+  "schema_version": "kamacite.valence-conformance.v1",
+  "canonical_codec": "kamacite-deterministic-json-valence-conformance-body-v1",
+  "has_entry": true,
+  "profile_version": "kamacite.valence_receipt_export.v1",
+  "source_schema": "kamacite.receipt.v1",
+  "output_schema": "kamacite.valence_receipt_export.v1",
+  "required_input_identity_domains": ["receipt"],
+  "output_identity_domain": "projection",
+  "checked_laws": [
+    "source-receipt-identity-bound",
+    "artifact-identity-preservation",
+    "non-claim-preservation",
+    "checked-law-preservation",
+    "diagnostic-summary-preservation",
+    "source-span-absence-explicit",
+    "artifacts-first-no-valence-runtime"
+  ],
+  "dependency_profile": "artifacts-first-no-valence-runtime",
+  "fixture_coverage": [
+    "positive",
+    "negative",
+    "source-spans",
+    "identity-domains",
+    "missing-non-claims",
+    "semantic-overclaim",
+    "malformed-input",
+    "stale-export-identity",
+    "entry-required"
+  ],
+  "non_claims": [
+    "Valence export is derived compatibility evidence",
+    "not canonical Kamacite IR",
+    "not Valence semantic ownership",
+    "not runtime correctness",
+    "not evaluator soundness",
+    "not compiler correctness"
+  ],
+  "conformance_identity": {
+    "domain": "adapter",
+    "algorithm": "blake3",
+    "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+  }
+}

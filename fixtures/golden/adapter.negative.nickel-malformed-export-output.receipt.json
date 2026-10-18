@@ -1,0 +1,73 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.negative.nickel-malformed-export-output",
+    "artifact_class": "adapter-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.nickel_adapter_suite.negative_fixtures.malformed_export]"
+    ],
+    "input_identities": {
+      "nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "0dea94cdddc2781473066572c89204968f46c27e6e6d390d9e5c8db75869cff9"
+      },
+      "nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {
+      "computed-nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "computed-nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "0dea94cdddc2781473066572c89204968f46c27e6e6d390d9e5c8db75869cff9"
+      },
+      "computed-nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "checked_laws": [
+      "export-output-decodes-as-json"
+    ],
+    "diagnostics": [
+      {
+        "code": "malformed-projection-output",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.negative_fixtures.malformed_export]",
+        "field": "nickel.export_bytes",
+        "message": "Nickel export bytes must decode under the declared JSON projection schema",
+        "details": {}
+      },
+      {
+        "code": "undeclared-authority",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.capability_boundary]",
+        "field": "nickel.sandbox_evidence",
+        "message": "Nickel adapter receipt lacks shell-enforced sandbox evidence",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "malformed export bytes are not trusted projection evidence"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "2368f7bf540d48f71ce6fa59c626c9eb59bcb248aaf7f5e5527e0e768b297806"
+  }
+}

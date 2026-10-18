@@ -1,0 +1,26 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "stack.positive.octet-source-shape-only",
+    "artifact_class": "stack-evidence",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.evidence_integration_conformance.octet]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "octet-source-shape-only"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Octet check is source-shape evidence only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "f1bce7c18c72f719aa9dc48bf32ec521e2c7708e8236e9f244ed2a10e389e7db"
+  }
+}

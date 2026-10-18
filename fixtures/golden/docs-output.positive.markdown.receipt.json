@@ -1,0 +1,39 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-output.positive.markdown",
+    "artifact_class": "documentation-output",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.docs.fixture_admission.positive_renderers]",
+      "r[kamacite.docs.renderers.markdown]"
+    ],
+    "input_identities": {
+      "declared-documentation-output": {
+        "domain": "documentation-output",
+        "algorithm": "blake3",
+        "hex": "47631b18255ce8007bf4983884627d42847fd37e495db6b167ad6c81a9207a68"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-output": {
+        "domain": "documentation-output",
+        "algorithm": "blake3",
+        "hex": "47631b18255ce8007bf4983884627d42847fd37e495db6b167ad6c81a9207a68"
+      }
+    },
+    "checked_laws": [
+      "deterministic-render"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Markdown output is a projection only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "e8d4bc2258eb707b9723090615cb0ed5ff200a00f655ed437b58c784fd025b4b"
+  }
+}

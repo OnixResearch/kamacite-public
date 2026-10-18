@@ -1,0 +1,50 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "source-envelope.negative.wrong-identity-domain",
+    "artifact_class": "source-envelope",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.typed_identity_domains.constructor_validation]",
+      "r[kamacite.validation_harness.seed_fixtures.wrong_identity_domain]"
+    ],
+    "input_identities": {
+      "declared-source": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "afe694dfcd747b297c6638d11318a9a5063015cb50123a9bae763d160e2ad2b5"
+      }
+    },
+    "output_identities": {
+      "computed-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "afe694dfcd747b297c6638d11318a9a5063015cb50123a9bae763d160e2ad2b5"
+      }
+    },
+    "checked_laws": [
+      "typed-identity-domain"
+    ],
+    "diagnostics": [
+      {
+        "code": "identity-domain-mismatch",
+        "requirement_id": "r[kamacite.lossless_ir.typed_identity_domains.projection_not_canonical]",
+        "field": "source.declared_identity",
+        "message": "identity domain did not match required typed domain",
+        "details": {
+          "actual": "projection",
+          "expected": "source"
+        }
+      }
+    ],
+    "non_claims": [
+      "not cross-domain coercion"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "c4853cae0597f3cf93a0a432daf82d428499fb75cf2f55bc546326193b009803"
+  }
+}

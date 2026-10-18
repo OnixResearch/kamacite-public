@@ -1,0 +1,51 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.positive.declared-discharge-recorded-replay",
+    "artifact_class": "algebraic-effect",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.fixture_corpus.positive_discharge]",
+      "r[kamacite.algebraic_effects.replay_profile.recorded_log]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "561617d253e0e0cf29bd8ab5b8758d848bda594cde178b2572d3939d19a6c21c"
+      },
+      "declared-effect-log": {
+        "domain": "effect-log",
+        "algorithm": "blake3",
+        "hex": "c5f566889bc03678adeb0bf686685fd3f2472aa106bdeca86ecab3b454ba8f28"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "561617d253e0e0cf29bd8ab5b8758d848bda594cde178b2572d3939d19a6c21c"
+      },
+      "computed-effect-log": {
+        "domain": "effect-log",
+        "algorithm": "blake3",
+        "hex": "c5f566889bc03678adeb0bf686685fd3f2472aa106bdeca86ecab3b454ba8f28"
+      }
+    },
+    "checked_laws": [
+      "exact-discharge",
+      "recorded-replay-log-bound"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "effect log is replay evidence only",
+      "not host authorization"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "7bcad90f41a4160b294f2b37c5b5d2dd0ac166bfdc88c9e853f627b4b74dbb00"
+  }
+}

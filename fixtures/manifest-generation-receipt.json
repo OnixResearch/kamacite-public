@@ -1,0 +1,42 @@
+{
+  "body": {
+    "schema": "kamacite.manifest-generation-receipt.v1",
+    "source_identity": {
+      "domain": "source",
+      "algorithm": "blake3",
+      "hex": "b08da7dcd16ba0c7b9f9c7e08376b6f2745cf6639ebc32e7a58ca03006026549"
+    },
+    "contract_identity": {
+      "domain": "adapter",
+      "algorithm": "blake3",
+      "hex": "884516399ccbd71c92e4b2ba358a9811f2749dda79ff090514a054f608fa760c"
+    },
+    "evaluator_profile": "nickel-reference-cli-1.17.0",
+    "evaluator_descriptor": "nickel-reference-cli:nickel-lang-cli nickel 1.17.0 (rev cargore)",
+    "evaluator_identity": {
+      "domain": "evaluator",
+      "algorithm": "blake3",
+      "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+    },
+    "projection_identity": {
+      "domain": "projection",
+      "algorithm": "blake3",
+      "hex": "e40fa3656a0a0649598387e6413612b5f5036254f1db739de4327af0ff053943"
+    },
+    "checked_laws": [
+      "complete-nickel-projection-bound",
+      "closed-manifest-contract-bound",
+      "evaluator-profile-bound"
+    ],
+    "non_claims": [
+      "not Nickel evaluator correctness",
+      "not proof of future deterministic evaluation",
+      "not Nickel source semantic correctness"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "e3186401c10c45701ac3b65183cdf49d17e9ee3064f4b9a006abdfdff87eab5e"
+  }
+}

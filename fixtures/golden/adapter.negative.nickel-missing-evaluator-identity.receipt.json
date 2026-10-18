@@ -1,0 +1,63 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.negative.nickel-missing-evaluator-identity",
+    "artifact_class": "adapter-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.nickel_adapter_suite.evaluator_identity.missing]"
+    ],
+    "input_identities": {
+      "nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {
+      "computed-nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "computed-nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "checked_laws": [
+      "evaluator-identity-required"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-input",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.evaluator_identity.missing]",
+        "field": "nickel.evaluator_identity",
+        "message": "trusted Nickel export evidence must bind evaluator identity",
+        "details": {}
+      },
+      {
+        "code": "undeclared-authority",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.capability_boundary]",
+        "field": "nickel.sandbox_evidence",
+        "message": "Nickel adapter receipt lacks shell-enforced sandbox evidence",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "Nickel export evidence is untrusted without evaluator identity"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "52ab80d867a248ab5db5c0a5e2fc8c311b6b62a0cabfc8e95f4f93e9ecea8d17"
+  }
+}

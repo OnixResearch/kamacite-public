@@ -1,0 +1,92 @@
+{
+  "body": {
+    "schema_version": "kamacite.valence_receipt_export.v1",
+    "profile_version": "kamacite.valence_receipt_export.v1",
+    "canonical_codec": "kamacite-deterministic-json-valence-export-projection-v1",
+    "evidence_role": "derived-evidence-projection",
+    "source_receipt_identity": {
+      "domain": "receipt",
+      "algorithm": "blake3",
+      "hex": "cb2233ee6d78163198525dbf77bc8f632b910fac660b59babc7c38fffd77c5ef"
+    },
+    "source_fixture_id": "source-envelope.valid.nickel-minimal",
+    "source_artifact_class": "source-envelope",
+    "source_verdict": "accepted",
+    "conformance_identity": {
+      "domain": "adapter",
+      "algorithm": "blake3",
+      "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+    },
+    "artifact_identities": [
+      {
+        "role": "conformance-entry",
+        "key": "conformance-entry",
+        "identity": {
+          "domain": "adapter",
+          "algorithm": "blake3",
+          "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+        }
+      },
+      {
+        "role": "source-receipt",
+        "key": "source-receipt",
+        "identity": {
+          "domain": "receipt",
+          "algorithm": "blake3",
+          "hex": "cb2233ee6d78163198525dbf77bc8f632b910fac660b59babc7c38fffd77c5ef"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "declared-source",
+        "identity": {
+          "domain": "source",
+          "algorithm": "blake3",
+          "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+        }
+      },
+      {
+        "role": "source-receipt-output",
+        "key": "computed-source",
+        "identity": {
+          "domain": "source",
+          "algorithm": "blake3",
+          "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+        }
+      }
+    ],
+    "checked_laws": [
+      "artifact-identity-preservation",
+      "artifacts-first-no-valence-runtime",
+      "checked-law-preservation",
+      "diagnostic-summary-preservation",
+      "names-as-metadata",
+      "non-claim-preservation",
+      "source-envelope-preservation",
+      "source-receipt-identity-bound",
+      "source-span-absence-explicit"
+    ],
+    "diagnostics": [],
+    "source_spans": {
+      "state": "absent",
+      "reason": "source span metadata absent in source receipt"
+    },
+    "non_claims": [
+      "Valence export is derived compatibility evidence",
+      "not Nickel evaluation semantics",
+      "not Valence semantic ownership",
+      "not arbitrary source translation",
+      "not canonical Kamacite IR",
+      "not compiler correctness",
+      "not evaluator soundness",
+      "not runtime correctness"
+    ],
+    "coupling_boundary": "artifacts-first-no-valence-runtime",
+    "claim_boundary": "Valence export preserves Kamacite receipt facts without broadening claims"
+  },
+  "export_identity": {
+    "domain": "projection",
+    "algorithm": "blake3",
+    "hex": "1a0b4d95500a6acf644a2f7ae81b7884ce1d316b6b8e8e73f751414e4a3b37db"
+  }
+}

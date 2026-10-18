@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.positive.single-use-continuation-evidence",
+    "artifact_class": "algebraic-effect",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.continuation_policy.single_use_evidence]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "5e31708b44f1a241746fb8841195875679d775da70850558303db3985dc1669b"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "5e31708b44f1a241746fb8841195875679d775da70850558303db3985dc1669b"
+      }
+    },
+    "checked_laws": [
+      "single-use-continuation-evidence"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "single-use evidence is bounded receipt data"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "169eeaf4fe5e6051103cd6923b52db2790aced6e6c0fd16ee3f82fa51550044c"
+  }
+}

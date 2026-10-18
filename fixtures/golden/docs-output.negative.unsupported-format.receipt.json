@@ -1,0 +1,46 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-output.negative.unsupported-format",
+    "artifact_class": "documentation-output",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.docs.renderers.unsupported_format]"
+    ],
+    "input_identities": {
+      "declared-documentation-output": {
+        "domain": "documentation-output",
+        "algorithm": "blake3",
+        "hex": "f780600a9f46fd254d00f192129716290ea0490860a3458c2aa14b8787593407"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-output": {
+        "domain": "documentation-output",
+        "algorithm": "blake3",
+        "hex": "f780600a9f46fd254d00f192129716290ea0490860a3458c2aa14b8787593407"
+      }
+    },
+    "checked_laws": [
+      "fail-closed-format"
+    ],
+    "diagnostics": [
+      {
+        "code": "unsupported-artifact-class",
+        "requirement_id": "r[kamacite.docs.renderers.unsupported_format]",
+        "field": "documentation_output.target_format",
+        "message": "documentation output target format is unsupported",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "unsupported format not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "691d1173220de0df793e6c84d17c1e359abb4178a5759ada3aca115f95201d67"
+  }
+}

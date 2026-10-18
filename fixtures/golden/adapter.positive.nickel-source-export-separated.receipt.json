@@ -1,0 +1,91 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.positive.nickel-source-export-separated",
+    "artifact_class": "adapter-receipt",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.nickel_adapter_suite.capability_boundary.evaluator_invocation]",
+      "r[kamacite.nickel_adapter_suite.evaluator_identity.bound]",
+      "r[kamacite.nickel_adapter_suite.positive_fixtures.valid_export]",
+      "r[kamacite.nickel_adapter_suite.source_export_separation.derived_projection]"
+    ],
+    "input_identities": {
+      "nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "nickel-import:source.ncl": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      },
+      "nickel-sandbox-evidence": {
+        "domain": "adapter",
+        "algorithm": "blake3",
+        "hex": "41af8dde919a3e91166364a0660252d94b4aaaf6783d62606a9679bce367fe7c"
+      },
+      "nickel-sandbox-profile": {
+        "domain": "adapter",
+        "algorithm": "blake3",
+        "hex": "1b97ef2db104877c185fbf849bde9999a98c0b66f240a5f24d9331d83bf2c706"
+      },
+      "nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {
+      "computed-nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "computed-nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "computed-nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      },
+      "nickel-sandbox-stderr": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262"
+      },
+      "nickel-sandbox-stdout": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      }
+    },
+    "checked_laws": [
+      "declared-evaluator-invocation",
+      "evaluator-identity-bound",
+      "root-relative-fixture-read",
+      "source-export-separation"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "nickel export is derived projection",
+      "not Nickel semantic-equivalence proof",
+      "not canonical Kamacite IR"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "14b41650e56c65adf466a0d5ab7c67b27cbf025417e4b0440dde44510e27f58a"
+  }
+}

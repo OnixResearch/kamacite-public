@@ -1,0 +1,34 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.negative.wasm-canonical-ir-overclaim",
+    "artifact_class": "adapter-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.wasm_adapter_conformance.not_ir]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "canonical-ir-overclaim-rejected"
+    ],
+    "diagnostics": [
+      {
+        "code": "canonical-ir-overclaim",
+        "requirement_id": "r[kamacite.lossless_ir.wasm_target_boundary.not_ir]",
+        "field": "adapter.claims_canonical_ir",
+        "message": "adapter or target artifact cannot replace Preserves canonical IR",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "compiled WASM is target artifact only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "4c2013152431a1cf46e155d096fc4f9a621ef01a08297b61c792234c61a21a97"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "identity.negative.source-as-receipt",
+    "artifact_class": "receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.typed_identity_domains.source_not_receipt]"
+    ],
+    "input_identities": {
+      "supplied": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {},
+    "checked_laws": [
+      "receipt-identity-separation"
+    ],
+    "diagnostics": [
+      {
+        "code": "identity-domain-mismatch",
+        "requirement_id": "r[kamacite.lossless_ir.typed_identity_domains.projection_not_canonical]",
+        "field": "identity_use.supplied_identity",
+        "message": "identity domain did not match required typed domain",
+        "details": {
+          "actual": "source",
+          "expected": "receipt"
+        }
+      }
+    ],
+    "non_claims": [
+      "receipt identity is separate domain"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "3e66161b66697bff2085d954cb639fa4a39949478c76778320521f61bd2ad284"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "source-envelope.negative.missing-source-bytes",
+    "artifact_class": "source-envelope",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.source_envelope_vocabulary.missing_bytes]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "source-bytes-required"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-source-bytes",
+        "requirement_id": "r[kamacite.lossless_ir.source_envelope_vocabulary.missing_bytes]",
+        "field": "source.source_bytes",
+        "message": "source envelope must preserve original bytes",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "not source preservation"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "63409a53e3b4bb64b36ab8e6743139260cbd9775ad68eaa3c97348be2b1e8899"
+  }
+}

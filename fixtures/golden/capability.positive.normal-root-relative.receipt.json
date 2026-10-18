@@ -1,0 +1,26 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "capability.positive.normal-root-relative",
+    "artifact_class": "capability-shell",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.capability_shells.filesystem_root]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "root-relative-path"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "capability shell evidence is not core filesystem authority"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "ad0ef5cfc52379d5dc14844d6e7e95f4d899c1c64fcf12e4812e6e599862723b"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.negative.missing-operation-schema",
+    "artifact_class": "algebraic-effect",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.signature_vocabulary.missing_schema]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "ea18dda5d0ec944b06f843e2f5aad0a5c2d88ad3dd22c5f8605b9226b5c78c37"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "ea18dda5d0ec944b06f843e2f5aad0a5c2d88ad3dd22c5f8605b9226b5c78c37"
+      }
+    },
+    "checked_laws": [
+      "operation-schema-required"
+    ],
+    "diagnostics": [
+      {
+        "code": "incomplete-effect-signature",
+        "requirement_id": "r[kamacite.algebraic_effects.signature_vocabulary.missing_schema]",
+        "field": "algebraic.signatures",
+        "message": "effect operation requires parameter and result schemas",
+        "details": {
+          "operation": "op.broken"
+        }
+      }
+    ],
+    "non_claims": [
+      "incomplete effect signature denied"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "18461d99ba5a3f69e35ffcf4bfe3f61c4435514d90f76a2cb43e3451f7a4b86b"
+  }
+}

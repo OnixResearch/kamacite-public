@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "source-envelope.positive.schema-generated-nickel-contract",
+    "artifact_class": "source-envelope",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.nickel_reference_boundary.generated_contracts]"
+    ],
+    "input_identities": {
+      "declared-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "d1d342f960ad13bea41c89601322ae633aa819d6a4f7ab9d815731cb61abb791"
+      }
+    },
+    "output_identities": {
+      "computed-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "d1d342f960ad13bea41c89601322ae633aa819d6a4f7ab9d815731cb61abb791"
+      }
+    },
+    "checked_laws": [
+      "generated-contract-fixture-only"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "generated contract corpus is fixture input, not Kamacite schema authority"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "566a1a7133a842d132b71b4c488c3cd1354bf7c055a82c4b8aee963a639c60ed"
+  }
+}

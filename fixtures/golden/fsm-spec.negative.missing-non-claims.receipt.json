@@ -1,0 +1,46 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "fsm-spec.negative.missing-non-claims",
+    "artifact_class": "fsm-spec",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.fsm_spec_vocabulary.complete]"
+    ],
+    "input_identities": {
+      "declared-fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "a70af2fd927a5e4dc43982a4c1265bf47338790f24ed055c98e375e2bbf52833"
+      }
+    },
+    "output_identities": {
+      "computed-fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "a70af2fd927a5e4dc43982a4c1265bf47338790f24ed055c98e375e2bbf52833"
+      }
+    },
+    "checked_laws": [
+      "fsm-non-claims-required"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-non-claim",
+        "requirement_id": "r[kamacite.lossless_ir.fsm_spec_vocabulary.complete]",
+        "field": "fsm.non_claims",
+        "message": "FSM artifacts require explicit non-claims before trust",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "payload-level non-claims are required"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "dcf03472463534c42ceb28656f986c3def301b56c1bf91b5981e50da8c4eda0e"
+  }
+}

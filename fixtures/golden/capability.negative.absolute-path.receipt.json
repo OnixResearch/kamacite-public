@@ -1,0 +1,36 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "capability.negative.absolute-path",
+    "artifact_class": "capability-shell",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.capability_shells.escape_fixtures]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "path-escape-denied"
+    ],
+    "diagnostics": [
+      {
+        "code": "path-escape",
+        "requirement_id": "r[kamacite.rust_determinism.capability_shells.escape_fixtures]",
+        "field": "capability.path",
+        "message": "shell path admission rejected deterministic escape or undeclared authority case",
+        "details": {
+          "path": "/etc/passwd"
+        }
+      }
+    ],
+    "non_claims": [
+      "absolute paths are not artifact authority"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "5bea2512e4d09858488e6894d56fc60b945b2ecb0f411ed20878bb0bd19e1c53"
+  }
+}

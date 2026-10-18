@@ -1,0 +1,49 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "fsm-spec.negative.wrong-identity-domain",
+    "artifact_class": "fsm-spec",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.fsm_receipt_vocabulary.identity_domain]"
+    ],
+    "input_identities": {
+      "declared-fsm-spec": {
+        "domain": "canonical-value",
+        "algorithm": "blake3",
+        "hex": "41fef4fd656563b1ec9aa70a779350d700e59198adee8c5051d4a7c9e0878e03"
+      }
+    },
+    "output_identities": {
+      "computed-fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "41fef4fd656563b1ec9aa70a779350d700e59198adee8c5051d4a7c9e0878e03"
+      }
+    },
+    "checked_laws": [
+      "typed-fsm-identity-domain"
+    ],
+    "diagnostics": [
+      {
+        "code": "identity-domain-mismatch",
+        "requirement_id": "r[kamacite.lossless_ir.typed_identity_domains.projection_not_canonical]",
+        "field": "fsm.declared_identity",
+        "message": "identity domain did not match required typed domain",
+        "details": {
+          "actual": "canonical-value",
+          "expected": "fsm-spec"
+        }
+      }
+    ],
+    "non_claims": [
+      "FSM identity domains are not interchangeable"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "409bd927e6c1d3e761066741bdcfec10e1357c1f802e187787bca7f61aa7deb4"
+  }
+}

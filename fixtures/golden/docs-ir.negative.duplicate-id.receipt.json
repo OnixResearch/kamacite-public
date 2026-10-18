@@ -1,0 +1,48 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-ir.negative.duplicate-id",
+    "artifact_class": "documentation-ir",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.docs.ir_projection.duplicate_id]"
+    ],
+    "input_identities": {
+      "declared-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "716c45f94881f60de1541118978e357baeb8cd846ea75390b5d8af9072a55157"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "716c45f94881f60de1541118978e357baeb8cd846ea75390b5d8af9072a55157"
+      }
+    },
+    "checked_laws": [
+      "fail-closed-duplicate"
+    ],
+    "diagnostics": [
+      {
+        "code": "duplicate-artifact-identity",
+        "requirement_id": "r[kamacite.docs.ir_projection.duplicate_id]",
+        "field": "documentation_ir.ids",
+        "message": "documentation page, section, anchor, or cell identity is duplicated",
+        "details": {
+          "ids": "dup"
+        }
+      }
+    ],
+    "non_claims": [
+      "duplicate anchors not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "a9bb82f231487116c0226c96151c2ecea66ebf037c509c56bd294e18cad27a3b"
+  }
+}

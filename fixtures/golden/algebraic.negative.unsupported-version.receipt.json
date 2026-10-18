@@ -1,0 +1,46 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.negative.unsupported-version",
+    "artifact_class": "algebraic-effect",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.ir_boundary.unsupported_version]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "5dbe0a11c4da10b4a32360686ca828fa6714cdccb19ae719b4e7dcdfc1738772"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "5dbe0a11c4da10b4a32360686ca828fa6714cdccb19ae719b4e7dcdfc1738772"
+      }
+    },
+    "checked_laws": [
+      "fail-closed-effect-version"
+    ],
+    "diagnostics": [
+      {
+        "code": "unsupported-algebraic-effect-version",
+        "requirement_id": "r[kamacite.algebraic_effects.ir_boundary.unsupported_version]",
+        "field": "algebraic.schema_version",
+        "message": "unsupported algebraic-effect schema version rejected",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "not compatibility defaulting"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "0f2eec1d831c1f84a4e3d7d29e3f0f1196a3b179735a738c15a8c556779ebf0b"
+  }
+}

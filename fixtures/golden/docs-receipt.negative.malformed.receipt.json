@@ -1,0 +1,47 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-receipt.negative.malformed",
+    "artifact_class": "documentation-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.docs.receipts.malformed]"
+    ],
+    "input_identities": {},
+    "output_identities": {
+      "computed-documentation-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "46a440aabafec0c1147deaf4e6be2c21bec30db2f29a4478d4f53263721448ec"
+      }
+    },
+    "checked_laws": [
+      "malformed-fails"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-input",
+        "requirement_id": "r[kamacite.docs.receipts]",
+        "field": "documentation_receipt.declared_receipt_identity",
+        "message": "documentation receipt identity is required",
+        "details": {}
+      },
+      {
+        "code": "missing-non-claim",
+        "requirement_id": "r[kamacite.docs.receipts.non_claims]",
+        "field": "documentation_receipt.non_claims",
+        "message": "documentation receipts must preserve non-claims",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "malformed receipt not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "63eba043f5b4fbc9e4d4b912d795e5936f100bbaa166a4efce0fb45bd2cdbcfa"
+  }
+}

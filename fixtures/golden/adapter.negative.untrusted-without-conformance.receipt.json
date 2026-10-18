@@ -1,0 +1,34 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.negative.untrusted-without-conformance",
+    "artifact_class": "adapter-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.adapter_conformance.untrusted_without_entry]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "conformance-entry-required"
+    ],
+    "diagnostics": [
+      {
+        "code": "incomplete-metadata",
+        "requirement_id": "r[kamacite.lossless_ir.adapter_conformance.untrusted_without_entry]",
+        "field": "adapter.has_conformance_entry",
+        "message": "adapter-specific claims require a conformance entry",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "no adapter-specific trust without conformance"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "f67d992049e6ec96244789e8e4b2d57ce2b44ae78822227e0062fb06031ffca8"
+  }
+}

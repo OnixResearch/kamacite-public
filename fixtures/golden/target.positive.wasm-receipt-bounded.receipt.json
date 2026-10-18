@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "target.positive.wasm-receipt-bounded",
+    "artifact_class": "target-artifact",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.wasm_adapter_conformance.receipt]"
+    ],
+    "input_identities": {
+      "declared-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "073709f60d49930fa5e855ecaad567aed0d3c8aa91885934c2f566067ad0601b"
+      }
+    },
+    "output_identities": {
+      "computed-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "073709f60d49930fa5e855ecaad567aed0d3c8aa91885934c2f566067ad0601b"
+      }
+    },
+    "checked_laws": [
+      "target-provenance-bound"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "WASM artifact is not canonical Kamacite IR"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "fde765dcf71f8e7239589c4116f625ed72cde82e8d0fa59c4a6fcaa822164349"
+  }
+}

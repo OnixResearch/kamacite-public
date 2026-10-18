@@ -1,0 +1,62 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "valence-export.negative.missing-non-claims",
+    "artifact_class": "valence-receipt-export",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.valence_receipt_export.conformance.missing_non_claims]",
+      "r[kamacite.valence_receipt_export.profile.non_claims]"
+    ],
+    "input_identities": {
+      "valence-conformance": {
+        "domain": "adapter",
+        "algorithm": "blake3",
+        "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+      },
+      "valence-source-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "cb2233ee6d78163198525dbf77bc8f632b910fac660b59babc7c38fffd77c5ef"
+      }
+    },
+    "output_identities": {},
+    "checked_laws": [
+      "artifact-identity-preservation",
+      "artifacts-first-no-valence-runtime",
+      "checked-law-preservation",
+      "diagnostic-summary-preservation",
+      "missing-non-claims-rejected",
+      "names-as-metadata",
+      "non-claim-preservation",
+      "source-envelope-preservation",
+      "source-receipt-identity-bound",
+      "source-span-absence-explicit"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-non-claim",
+        "requirement_id": "r[kamacite.valence_receipt_export.conformance.missing_non_claims]",
+        "field": "source_receipt.body.non_claims",
+        "message": "Valence export must preserve non-claims from the source Kamacite receipt",
+        "details": {}
+      },
+      {
+        "code": "stale-identity",
+        "requirement_id": "r[kamacite.valence_receipt_export.conformance.malformed_input]",
+        "field": "source_receipt.receipt_identity.hex",
+        "message": "source receipt identity does not match the canonical source receipt body",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "missing source non-claims fail closed"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "8bdbefbd13ed43ae78a4678f583b15f27b4380ea1b0ad89a69d4d0f48cdfd30e"
+  }
+}

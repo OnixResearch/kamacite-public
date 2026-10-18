@@ -1,0 +1,47 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "source-envelope.negative.stale-source-hash",
+    "artifact_class": "source-envelope",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.total_diagnostics.stale_hash]",
+      "r[kamacite.validation_harness.seed_fixtures.stale_source_hash]"
+    ],
+    "input_identities": {
+      "declared-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {
+      "computed-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "632f72c6368db00cb01de52eebdcb2270bc36e01e293de3c00f6dedc06b02d5c"
+      }
+    },
+    "checked_laws": [
+      "fail-closed-stale-identity"
+    ],
+    "diagnostics": [
+      {
+        "code": "stale-identity",
+        "requirement_id": "r[kamacite.lossless_ir.source_preservation.hash_mismatch]",
+        "field": "source.declared_identity.hex",
+        "message": "declared source identity does not match source bytes",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "not trusted source identity"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "f5ff9ca465c43c89cfd0210fa41e0e8015ee55488596a3e92118d38f58189e3c"
+  }
+}

@@ -1,0 +1,1 @@
+<kamacite-algebraic-effect-v2 1 [<EffectOperation "op.trace" "Trace" <Some "string"> <Some "unit">>] ["op.trace"] #f #f <None> <None> <Some <ReplayProfileInput "deterministic" [] <None>>> [] []>

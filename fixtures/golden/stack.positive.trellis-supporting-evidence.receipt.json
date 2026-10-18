@@ -1,0 +1,26 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "stack.positive.trellis-supporting-evidence",
+    "artifact_class": "stack-evidence",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.stack_roles.trellis.supporting_evidence]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "trellis-supporting-only"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Trellis proof reference does not replace Kamacite receipt"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "b1b8f0717be62f0688fb6c212cbfa87722db1271d41595a3c4ec5cb5023d1361"
+  }
+}

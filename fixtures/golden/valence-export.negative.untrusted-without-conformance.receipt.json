@@ -1,0 +1,49 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "valence-export.negative.untrusted-without-conformance",
+    "artifact_class": "valence-receipt-export",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.valence_receipt_export.conformance.entry_required]"
+    ],
+    "input_identities": {
+      "valence-conformance": {
+        "domain": "adapter",
+        "algorithm": "blake3",
+        "hex": "476c08d5c3cd9afdb3a6f8cc408ff973df116cb2a71479f8f7ab59936663896a"
+      },
+      "valence-source-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "cb2233ee6d78163198525dbf77bc8f632b910fac660b59babc7c38fffd77c5ef"
+      }
+    },
+    "output_identities": {},
+    "checked_laws": [
+      "conformance-entry-required",
+      "names-as-metadata",
+      "non-claim-preservation",
+      "source-envelope-preservation",
+      "source-receipt-identity-bound"
+    ],
+    "diagnostics": [
+      {
+        "code": "missing-conformance-entry",
+        "requirement_id": "r[kamacite.valence_receipt_export.conformance.entry_required]",
+        "field": "conformance.has_entry",
+        "message": "Valence export requires a matching conformance entry before trust",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "Valence-like exports without conformance are untrusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "51ef4cc56003a9b39c212abd4841a3b1fd7b00743622d11f69a6d7165918b47c"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "claim.negative.arbitrary-source-translation",
+    "artifact_class": "unsupported-claim",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.negative_fixtures.unsupported_translation]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "unsupported-claim-fails-closed"
+    ],
+    "diagnostics": [
+      {
+        "code": "unsupported-claim",
+        "requirement_id": "r[kamacite.lossless_ir.losslessness_classes.arbitrary_source_denied]",
+        "field": "claim.claim_class",
+        "message": "unsupported lossless translation or semantic-equivalence claim rejected",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "not arbitrary host-language equivalence"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "bbd6293f11fdce66471980cd2172b75a767e9798a2201036c25e63b1e52835ff"
+  }
+}

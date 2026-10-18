@@ -1,0 +1,55 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.negative.handler-name-not-discharge",
+    "artifact_class": "algebraic-effect",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.handler_descriptor.name_not_discharge]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "f1b788477a3b51182b8d8f7615fba4fcb24a1a84666dd28a7f965787595ec751"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "f1b788477a3b51182b8d8f7615fba4fcb24a1a84666dd28a7f965787595ec751"
+      }
+    },
+    "checked_laws": [
+      "operation-ids-required-for-discharge"
+    ],
+    "diagnostics": [
+      {
+        "code": "handler-name-not-discharge",
+        "requirement_id": "r[kamacite.algebraic_effects.handler_descriptor.name_not_discharge]",
+        "field": "algebraic.handler.handled_operations",
+        "message": "handler names cannot prove discharge without operation identities",
+        "details": {}
+      },
+      {
+        "code": "unknown-effect-operation",
+        "requirement_id": "r[kamacite.algebraic_effects.handler_descriptor.residual_row]",
+        "field": "algebraic.handler.residual_operations",
+        "message": "unhandled input operation is missing from residual row",
+        "details": {
+          "operation": "op.read-config"
+        }
+      }
+    ],
+    "non_claims": [
+      "handler names are metadata"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "47d8bab97c57b149f789d9df6dd3dade055a66bc46575892949c27c3cf9696bf"
+  }
+}

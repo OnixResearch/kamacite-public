@@ -1,0 +1,41 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-receipt.positive.output-hashes",
+    "artifact_class": "documentation-receipt",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.docs.receipts.output_hashes]",
+      "r[kamacite.docs.stack_roles.valence]"
+    ],
+    "input_identities": {
+      "declared-documentation-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "6cb5b41a2be6ce942b509f2408a569135090d1a6a75cb6a4003df4034c956e33"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-receipt": {
+        "domain": "receipt",
+        "algorithm": "blake3",
+        "hex": "6cb5b41a2be6ce942b509f2408a569135090d1a6a75cb6a4003df4034c956e33"
+      }
+    },
+    "checked_laws": [
+      "non-claims-preserved",
+      "output-hashes-bound"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "not canonical rendered output",
+      "not semantic equivalence"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "69bee046220351c854d4421dec7988e35c551c79925dc06dfa330d839cbcec6d"
+  }
+}

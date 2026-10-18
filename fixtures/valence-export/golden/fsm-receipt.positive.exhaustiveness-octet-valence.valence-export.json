@@ -1,0 +1,181 @@
+{
+  "body": {
+    "schema_version": "kamacite.valence_receipt_export.v1",
+    "profile_version": "kamacite.valence_receipt_export.v1",
+    "canonical_codec": "kamacite-deterministic-json-valence-export-projection-v1",
+    "evidence_role": "derived-evidence-projection",
+    "source_receipt_identity": {
+      "domain": "receipt",
+      "algorithm": "blake3",
+      "hex": "e482f3481ea5c062a24fd18d6351809c053c52a690fd6b7e2ee5827408b8c67d"
+    },
+    "source_fixture_id": "fsm-receipt.positive.exhaustiveness-octet-valence",
+    "source_artifact_class": "fsm-receipt",
+    "source_verdict": "accepted",
+    "conformance_identity": {
+      "domain": "adapter",
+      "algorithm": "blake3",
+      "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+    },
+    "artifact_identities": [
+      {
+        "role": "conformance-entry",
+        "key": "conformance-entry",
+        "identity": {
+          "domain": "adapter",
+          "algorithm": "blake3",
+          "hex": "d3ae754d7899a794d09781914d5fb4eb6ebdb9becce16ddc0615988864725830"
+        }
+      },
+      {
+        "role": "source-receipt",
+        "key": "source-receipt",
+        "identity": {
+          "domain": "receipt",
+          "algorithm": "blake3",
+          "hex": "e482f3481ea5c062a24fd18d6351809c053c52a690fd6b7e2ee5827408b8c67d"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "declared-fsm-receipt",
+        "identity": {
+          "domain": "receipt",
+          "algorithm": "blake3",
+          "hex": "6426edec5ef7282b545a65fad4abf4c1fbe90d1e734ac878467b2ec420491673"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-adapter",
+        "identity": {
+          "domain": "adapter",
+          "algorithm": "blake3",
+          "hex": "8ebb62f28593ba13c5d38d0c63810944b242da57d3ee0f2c81c1fde0747aff0e"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-denial-coverage",
+        "identity": {
+          "domain": "fsm-coverage",
+          "algorithm": "blake3",
+          "hex": "3c469a84fb15ed4177391b809ef242b29a4f14790de0230848213af16b40e79f"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-event-universe",
+        "identity": {
+          "domain": "fsm-universe",
+          "algorithm": "blake3",
+          "hex": "da69e68d038be61ac54cdd5df8a1145281abf3ac9d73b18498e496fcbc9ffe28"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-exclusion-coverage",
+        "identity": {
+          "domain": "fsm-coverage",
+          "algorithm": "blake3",
+          "hex": "d7f54611c11cee92aa1b303bc0606761e79fd8112c38051945b554572f68cccc"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-missing-cells",
+        "identity": {
+          "domain": "fsm-coverage",
+          "algorithm": "blake3",
+          "hex": "ffd8e07f3077ae6c6f92ae1d360db65d3f9130372a689a7540c22e4224b0b06b"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-spec",
+        "identity": {
+          "domain": "fsm-spec",
+          "algorithm": "blake3",
+          "hex": "f7e6b8cafb915755fedc8cd1f1d267142ee35d309ba76128e1ee15c6ee0a0bf0"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-state-universe",
+        "identity": {
+          "domain": "fsm-universe",
+          "algorithm": "blake3",
+          "hex": "1eea718435e25dbd3dea52ec1bcd77dd159a752e54225f8bf09e93a5a799b15b"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "fsm-transition-coverage",
+        "identity": {
+          "domain": "fsm-coverage",
+          "algorithm": "blake3",
+          "hex": "ed6b7e12821d15e4b9f4544e5ed98e20abfbcca92ee53c2eea7a772a02799026"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "octet-source-shape-receipt",
+        "identity": {
+          "domain": "receipt",
+          "algorithm": "blake3",
+          "hex": "c07707d770698c323a37eb79283fbb9ca2033aee7b0ada926cb368a0f34edba3"
+        }
+      },
+      {
+        "role": "source-receipt-input",
+        "key": "valence-fsm-export-projection",
+        "identity": {
+          "domain": "projection",
+          "algorithm": "blake3",
+          "hex": "cd7e6ade061bf11ba4fb7be2dbce5a7106e5f9f5318a82b9198b93c8672af8a7"
+        }
+      },
+      {
+        "role": "source-receipt-output",
+        "key": "computed-fsm-receipt",
+        "identity": {
+          "domain": "receipt",
+          "algorithm": "blake3",
+          "hex": "6426edec5ef7282b545a65fad4abf4c1fbe90d1e734ac878467b2ec420491673"
+        }
+      }
+    ],
+    "checked_laws": [
+      "artifact-identity-preservation",
+      "artifacts-first-no-valence-runtime",
+      "checked-law-preservation",
+      "diagnostic-summary-preservation",
+      "non-claim-preservation",
+      "source-receipt-identity-bound",
+      "source-span-absence-explicit",
+      "total-pair-coverage"
+    ],
+    "diagnostics": [],
+    "source_spans": {
+      "state": "absent",
+      "reason": "source span metadata absent in source receipt"
+    },
+    "non_claims": [
+      "Octet evidence is source-shape only",
+      "Valence export is derived compatibility evidence",
+      "Valence export is derived evidence",
+      "not Valence semantic ownership",
+      "not canonical Kamacite IR",
+      "not compiler correctness",
+      "not evaluator soundness",
+      "not runtime correctness"
+    ],
+    "coupling_boundary": "artifacts-first-no-valence-runtime",
+    "claim_boundary": "Valence export preserves Kamacite receipt facts without broadening claims"
+  },
+  "export_identity": {
+    "domain": "projection",
+    "algorithm": "blake3",
+    "hex": "933aa9aa73e62948d48985b9bcb924ff75a304be8f73d2cc2cb061a8cb44d196"
+  }
+}

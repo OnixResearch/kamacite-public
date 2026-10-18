@@ -1,0 +1,46 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "fsm-spec.negative.stale-identity",
+    "artifact_class": "fsm-spec",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.fsms.fixture_corpus.negative_stale_identity]"
+    ],
+    "input_identities": {
+      "declared-fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "output_identities": {
+      "computed-fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "1247d9272ed4043dbeea2759312b4d7c9551cdf5343d85b7951b0b4fdd1688ca"
+      }
+    },
+    "checked_laws": [
+      "fsm-identity-matches-canonical-bytes"
+    ],
+    "diagnostics": [
+      {
+        "code": "stale-identity",
+        "requirement_id": "r[kamacite.lossless_ir.fsm_spec_vocabulary.complete]",
+        "field": "fsm.declared_identity.hex",
+        "message": "declared FSM spec identity does not match canonical Preserves packed bytes",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "stale FSM identities are not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "81faba6adf2b2a1cdd20b1a4daead54e91b2585592f7726790ce9358a063a9e4"
+  }
+}

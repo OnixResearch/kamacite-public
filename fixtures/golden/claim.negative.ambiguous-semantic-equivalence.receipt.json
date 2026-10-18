@@ -1,0 +1,41 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "claim.negative.ambiguous-semantic-equivalence",
+    "artifact_class": "unsupported-claim",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.rust_determinism.total_diagnostics.ambiguous_claim]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "ambiguous-claim-rejected"
+    ],
+    "diagnostics": [
+      {
+        "code": "ambiguous-claim",
+        "requirement_id": "r[kamacite.lossless_ir.total_diagnostics.malformed]",
+        "field": "claim.preserve_source_only",
+        "message": "unsupported source translation must remain source-envelope-only evidence",
+        "details": {}
+      },
+      {
+        "code": "unsupported-claim",
+        "requirement_id": "r[kamacite.lossless_ir.losslessness_classes.arbitrary_source_denied]",
+        "field": "claim.claim_class",
+        "message": "unsupported lossless translation or semantic-equivalence claim rejected",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "not semantic equivalence proof"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "a057c697c788599d6400edac938b3dbdf905308fada84c6b3c7f8f5472f9eb29"
+  }
+}

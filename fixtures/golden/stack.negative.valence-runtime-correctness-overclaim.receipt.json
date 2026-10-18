@@ -1,0 +1,34 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "stack.negative.valence-runtime-correctness-overclaim",
+    "artifact_class": "stack-evidence",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.stack_roles.valence.wrap_receipt]"
+    ],
+    "input_identities": {},
+    "output_identities": {},
+    "checked_laws": [
+      "stack-overclaim-rejected"
+    ],
+    "diagnostics": [
+      {
+        "code": "ambiguous-claim",
+        "requirement_id": "r[kamacite.lossless_ir.stack_evidence_boundary.octet_checks]",
+        "field": "stack.broadens_claim",
+        "message": "stack evidence export broadened Kamacite bounded claim",
+        "details": {}
+      }
+    ],
+    "non_claims": [
+      "Valence wrapping is not runtime correctness"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "cdccf791c4c1db4d5b8ee204204f9673edc3f56d9ffaa29f6df93044c293ecf4"
+  }
+}

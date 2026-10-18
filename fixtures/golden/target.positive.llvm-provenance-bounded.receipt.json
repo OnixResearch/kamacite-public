@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "target.positive.llvm-provenance-bounded",
+    "artifact_class": "target-artifact",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.compiler_target_conformance.llvm_metadata]"
+    ],
+    "input_identities": {
+      "declared-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "1f2f5a5f9ff7f04d8a8e9e79890df6c797599ec381c1bba47ae615d9a2922dd5"
+      }
+    },
+    "output_identities": {
+      "computed-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "1f2f5a5f9ff7f04d8a8e9e79890df6c797599ec381c1bba47ae615d9a2922dd5"
+      }
+    },
+    "checked_laws": [
+      "compiler-target-provenance"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "LLVM IR is target evidence only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "10a988e4994eba0ef9cafd594d04159a9441bd2058832692fd8541112df178d2"
+  }
+}

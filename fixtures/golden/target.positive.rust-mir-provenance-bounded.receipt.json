@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "target.positive.rust-mir-provenance-bounded",
+    "artifact_class": "target-artifact",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.compiler_target_conformance.ghc_mir_provenance]"
+    ],
+    "input_identities": {
+      "declared-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "be4fb8bd87ea3ba775e1ecc56c91beda334167f2833e4b70f4fbd8a554ad3a30"
+      }
+    },
+    "output_identities": {
+      "computed-target": {
+        "domain": "target-artifact",
+        "algorithm": "blake3",
+        "hex": "be4fb8bd87ea3ba775e1ecc56c91beda334167f2833e4b70f4fbd8a554ad3a30"
+      }
+    },
+    "checked_laws": [
+      "rust-mir-provenance-only"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Rust MIR is target provenance evidence only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "7aba548556121be4820e7af3d24b0c43af205382603849891f01fd1f8e623e4a"
+  }
+}

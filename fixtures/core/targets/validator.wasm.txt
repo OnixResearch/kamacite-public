@@ -1,0 +1,1 @@
+wasm-target-placeholder: validates Kamacite bytes and returns receipts only

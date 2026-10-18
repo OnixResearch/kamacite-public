@@ -1,0 +1,23 @@
+[package]
+name = "kamacite-cli"
+version = "0.1.0"
+edition.workspace = true
+license = "AGPL-3.0-or-later"
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "kamacite-validate"
+path = "src/main.rs"
+
+[[bin]]
+name = "kamacite-semantic-operation"
+path = "src/semantic_operation_cli.rs"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+kamacite-core = { path = "../kamacite-core" }
+nickel-export-core.workspace = true
+rustix.workspace = true
+steel.workspace = true

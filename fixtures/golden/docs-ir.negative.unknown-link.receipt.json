@@ -1,0 +1,57 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-ir.negative.unknown-link",
+    "artifact_class": "documentation-ir",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.docs.renderers.unknown_link]"
+    ],
+    "input_identities": {
+      "declared-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "36252d442abc263c185f06fcb81604be8af19b029003a6df8868edd0b25ad94e"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "36252d442abc263c185f06fcb81604be8af19b029003a6df8868edd0b25ad94e"
+      }
+    },
+    "checked_laws": [
+      "fail-closed-link"
+    ],
+    "diagnostics": [
+      {
+        "code": "duplicate-artifact-identity",
+        "requirement_id": "r[kamacite.docs.ir_projection.duplicate_id]",
+        "field": "documentation_ir.ids",
+        "message": "documentation page, section, anchor, or cell identity is duplicated",
+        "details": {
+          "ids": "known"
+        }
+      },
+      {
+        "code": "missing-input",
+        "requirement_id": "r[kamacite.docs.renderers.unknown_link]",
+        "field": "documentation_ir.sections.links",
+        "message": "documentation link target is unknown",
+        "details": {
+          "target": "missing-target"
+        }
+      }
+    ],
+    "non_claims": [
+      "unknown links not trusted"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "ac89178772021303bfc6afd306e57d89be8f7fc3c0b8d74ec3ea7f353bab9137"
+  }
+}

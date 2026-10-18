@@ -1,0 +1,45 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "canonical-value.positive.preserves-minimal",
+    "artifact_class": "canonical-value",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.format_strategy.preserves_roundtrip]",
+      "r[kamacite.rust_determinism.canonical_identity.blake3]"
+    ],
+    "input_identities": {
+      "declared-canonical": {
+        "domain": "canonical-value",
+        "algorithm": "blake3",
+        "hex": "4aae45a48df037e16bd2a160ba815b264b5dfd40725957561f9f75300681f846"
+      },
+      "projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "b02c13f93f2ede1a565750121130cd146c0fa162824868e65f038d3250536f87"
+      }
+    },
+    "output_identities": {
+      "computed-canonical": {
+        "domain": "canonical-value",
+        "algorithm": "blake3",
+        "hex": "4aae45a48df037e16bd2a160ba815b264b5dfd40725957561f9f75300681f846"
+      }
+    },
+    "checked_laws": [
+      "preserves-bytes-authoritative",
+      "projection-derived"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "JSON projection is compatibility only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "7288b6acdd1fab4b5df5fee7ce766a0fccb9fbab6e23d9353c429c6b21adf49a"
+  }
+}

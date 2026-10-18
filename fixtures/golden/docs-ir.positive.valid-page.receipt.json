@@ -1,0 +1,44 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "docs-ir.positive.valid-page",
+    "artifact_class": "documentation-ir",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.docs.fixture_admission.positive_ir]",
+      "r[kamacite.docs.ir_projection]",
+      "r[kamacite.docs.renderers.stable_anchors]",
+      "r[kamacite.docs.renderers.stable_links]"
+    ],
+    "input_identities": {
+      "declared-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "62cf3fc9b5839cd60c42e73bb15ada84d5de628d19b7986fe782abd7bea680eb"
+      }
+    },
+    "output_identities": {
+      "computed-documentation-ir": {
+        "domain": "documentation-ir",
+        "algorithm": "blake3",
+        "hex": "62cf3fc9b5839cd60c42e73bb15ada84d5de628d19b7986fe782abd7bea680eb"
+      }
+    },
+    "checked_laws": [
+      "source-envelopes-separate",
+      "stable-anchors",
+      "stable-links"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "documentation IR is not rendered output authority",
+      "runnable cells are not executed by default"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "737699df4ae38d65709ba7402ac14da96d891555dfc61166f413454197be810a"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "adapter.negative.nickel-unsupported-evaluator-identity",
+    "artifact_class": "adapter-receipt",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.nickel_adapter_suite.evaluator_identity.unsupported]"
+    ],
+    "input_identities": {
+      "nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "output_identities": {
+      "computed-nickel-evaluator": {
+        "domain": "evaluator",
+        "algorithm": "blake3",
+        "hex": "97c4f5c61695ff74293d0eca8371587368de724256328082e095867fbfac3524"
+      },
+      "computed-nickel-export-projection": {
+        "domain": "projection",
+        "algorithm": "blake3",
+        "hex": "50cc1102b1c612e6962547aacdcef9a400d4416ef8dd9388e885991853c400c9"
+      },
+      "computed-nickel-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "dee483bc97a1e84b5e4da7a288a66abfb02665de4edd4036290ce1f31cec3d93"
+      }
+    },
+    "checked_laws": [
+      "unsupported-evaluator-fails-closed"
+    ],
+    "diagnostics": [
+      {
+        "code": "undeclared-authority",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.capability_boundary]",
+        "field": "nickel.sandbox_evidence",
+        "message": "Nickel adapter receipt lacks shell-enforced sandbox evidence",
+        "details": {}
+      },
+      {
+        "code": "unsupported-evaluator-identity",
+        "requirement_id": "r[kamacite.nickel_adapter_suite.evaluator_identity.unsupported]",
+        "field": "nickel.evaluator_profile",
+        "message": "Nickel export evidence must use the accepted reference CLI evaluator profile",
+        "details": {
+          "profile": "third-party-nickel-wrapper"
+        }
+      }
+    ],
+    "non_claims": [
+      "unsupported evaluator identity is external untrusted evidence"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "1200f8dc31ffd351167a5c4325c4c4e9945bb822e7f4d33aaf767cedfd5eb780"
+  }
+}

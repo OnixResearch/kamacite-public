@@ -1,0 +1,48 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "algebraic.negative.host-capability-confusion",
+    "artifact_class": "algebraic-effect",
+    "verdict": "rejected",
+    "requirement_ids": [
+      "r[kamacite.algebraic_effects.fixture_corpus.negative_host_confusion]"
+    ],
+    "input_identities": {
+      "declared-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "122c85def5fdbae3b504a6b47102281db09f97088443d36f9be183279550aef0"
+      }
+    },
+    "output_identities": {
+      "computed-algebraic-effect": {
+        "domain": "algebraic-effect",
+        "algorithm": "blake3",
+        "hex": "122c85def5fdbae3b504a6b47102281db09f97088443d36f9be183279550aef0"
+      }
+    },
+    "checked_laws": [
+      "operation-not-authority"
+    ],
+    "diagnostics": [
+      {
+        "code": "host-capability-confusion",
+        "requirement_id": "r[kamacite.algebraic_effects.host_boundary.operation_not_authority]",
+        "field": "algebraic.claimed_host_authority",
+        "message": "algebraic operation declaration does not grant host authority",
+        "details": {
+          "authority": "random"
+        }
+      }
+    ],
+    "non_claims": [
+      "operation declarations do not grant host authority"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "00f46364180b46fc6439dff68e59c22b2b1aaa745a441a8fd0fb5fde53545333"
+  }
+}

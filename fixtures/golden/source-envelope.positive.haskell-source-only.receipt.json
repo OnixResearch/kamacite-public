@@ -1,0 +1,38 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "source-envelope.positive.haskell-source-only",
+    "artifact_class": "source-envelope",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.lossless_ir.haskell_boundary.source_envelope]"
+    ],
+    "input_identities": {
+      "declared-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "9401c4c4268b8632f3d4ab463dca3a330797b3181ba34d8fd2c0b65ec372f0e7"
+      }
+    },
+    "output_identities": {
+      "computed-source": {
+        "domain": "source",
+        "algorithm": "blake3",
+        "hex": "9401c4c4268b8632f3d4ab463dca3a330797b3181ba34d8fd2c0b65ec372f0e7"
+      }
+    },
+    "checked_laws": [
+      "haskell-source-envelope-only"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Haskell source is preserved source only, not Kamacite IR"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "09c8dc64d00b18038fab4137f02a002483add6a8c0d49e35667ccdb152a9dfda"
+  }
+}

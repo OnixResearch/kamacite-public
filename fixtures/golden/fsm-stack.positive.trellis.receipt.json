@@ -1,0 +1,32 @@
+{
+  "body": {
+    "schema_version": "kamacite.receipt.v1",
+    "canonical_codec": "kamacite-deterministic-json-receipt-projection-v1",
+    "fixture_id": "fsm-stack.positive.trellis",
+    "artifact_class": "stack-evidence",
+    "verdict": "accepted",
+    "requirement_ids": [
+      "r[kamacite.fsms.stack_roles.trellis]"
+    ],
+    "input_identities": {
+      "trellis-proof-reference:fsm-spec": {
+        "domain": "fsm-spec",
+        "algorithm": "blake3",
+        "hex": "f7e6b8cafb915755fedc8cd1f1d267142ee35d309ba76128e1ee15c6ee0a0bf0"
+      }
+    },
+    "output_identities": {},
+    "checked_laws": [
+      "stack-role-boundary"
+    ],
+    "diagnostics": [],
+    "non_claims": [
+      "Trellis proof reference is supporting evidence only"
+    ]
+  },
+  "receipt_identity": {
+    "domain": "receipt",
+    "algorithm": "blake3",
+    "hex": "50b7324cd00a42e978178e0e86509deac052696c17eac640f4b15c638f46e6a8"
+  }
+}
